@@ -53,7 +53,7 @@ const page = () => {
   const CreateProduct = async (values) => {
     try {
       const res = await fetch(
-        "https://lesson-bot-node.onrender.com/api/products",
+        "https://web-bot-node-bqye.onrender.com/api/products",
         {
           headers: {
             "Content-Type": "application/json",
