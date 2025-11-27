@@ -11,7 +11,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 const page = () => {
   const { id } = useParams();
   const { data, error, isLoading } = useSWR(
-    `https://lesson-bot-node.onrender.com/api/products/category/${id}`,
+    `https://web-bot-node-bqye.onrender.com/api/category`,
     fetcher
   );
 
@@ -28,3 +28,7 @@ const page = () => {
 };
 
 export default page;
+
+
+
+

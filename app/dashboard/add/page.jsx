@@ -23,7 +23,7 @@ const page = () => {
     data: category,
     error,
     isLoading,
-  } = useSWR("https://lesson-bot-node.onrender.com/api/categories", fetcher);
+  } = useSWR("https://web-bot-node-bqye.onrender.com/api/categories", fetcher);
 
   const catSellect = category?.map((item) => {
     return { value: item._id, label: item.name };
