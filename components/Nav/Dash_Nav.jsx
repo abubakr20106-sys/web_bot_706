@@ -11,6 +11,11 @@ const Dash_Nav = () => {
       <Link href={`/dashboard/add`}>
         <Button variant="light">Mahsulot qo'shish</Button>
       </Link>
+
+
+      <Link href={`/`}>
+        <Button ml={"100px"} variant="light">Ortga</Button>
+      </Link>
     </Flex>
   );
 };

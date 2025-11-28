@@ -11,7 +11,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 const page = () => {
   const { id } = useParams();
   const { data, error, isLoading } = useSWR(
-    `https://web-bot-node-bqye.onrender.com/api/category`,
+    `https://web-bot-node-bqye.onrender.com/api/products/category/${id}`,
     fetcher
   );
 
