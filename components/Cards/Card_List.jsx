@@ -78,13 +78,15 @@ const App = () => {
   return (
     <div style={{ padding: 20, paddingBottom: 120 }}>
       <Grid gutter="md">
+
+        {/* ==== Skeleton loader ==== */}
         {loading &&
           Array(6)
             .fill(0)
             .map((_, i) => (
-              <Grid.Col key={i} span={{ base: 6, sm: 4, lg: 3 }}>
+              <Grid.Col key={i} span={{ base: 12, sm: 6, lg: 3 }}>
                 <Card withBorder radius="lg" padding="sm">
-                  <Skeleton height={200} />
+                  <Skeleton height={230} />
                   <Skeleton mt="md" height={14} width="80%" />
                   <Skeleton mt="sm" height={14} width="60%" />
                   <Skeleton mt="md" height={20} width="40%" />
@@ -93,15 +95,16 @@ const App = () => {
               </Grid.Col>
             ))}
 
+        {/* ==== Products ==== */}
         {!loading &&
           items.map((item) => (
-            <Grid.Col key={item._id} span={{ base: 6, sm: 4, lg: 3 }}>
+            <Grid.Col key={item._id} span={{ base: 12, sm: 6, lg: 3 }}>
               <Card withBorder radius="lg" padding="sm">
                 <Card.Section>
                   <div style={{ position: "relative" }}>
                     <Image
                       src={item.image}
-                      height={200}
+                      height={230}
                       fit="cover"
                     />
 
@@ -132,7 +135,7 @@ const App = () => {
                           background: "#00C74D",
                           color: "white",
                           padding: "4px 10px",
-                          fontSize: 6,
+                          fontSize: 8,
                           fontWeight: 800,
                           borderRadius: 8,
                         }}
@@ -153,7 +156,6 @@ const App = () => {
                   </Text>
                 )}
 
-                {/* PRICE */}
                 <Text fw={700} mt={4} size="lg" style={{ color: "#7000FF" }}>
                   {item.price.toLocaleString()} $
                 </Text>
