@@ -78,8 +78,6 @@ const App = () => {
   return (
     <div style={{ padding: 20, paddingBottom: 120 }}>
       <Grid gutter="md">
-
-        {/* ==== Skeleton loader ==== */}
         {loading &&
           Array(6)
             .fill(0)
@@ -95,7 +93,6 @@ const App = () => {
               </Grid.Col>
             ))}
 
-        {/* ==== Products ==== */}
         {!loading &&
           items.map((item) => (
             <Grid.Col key={item._id} span={{ base: 6, sm: 4, lg: 3 }}>
@@ -104,7 +101,7 @@ const App = () => {
                   <div style={{ position: "relative" }}>
                     <Image
                       src={item.image}
-                      height={200} // rasm balandligini avvalgidek qoldirdik
+                      height={200}
                       fit="cover"
                     />
 
@@ -266,11 +263,13 @@ const App = () => {
         </div>
       )}
 
-      {/* ===== RESPONSIVE WIDTH ONLY ===== */}
+      {/* ===== RESPONSIVE WIDTH ONLY + 40px KENGAYTIRISH ===== */}
       <style jsx>{`
         @media (max-width: 480px) {
           .product-card {
-            width: 100%;
+            width: calc(100% + 40px);
+            margin-left: -20px;
+            margin-right: -20px;
           }
         }
       `}</style>
