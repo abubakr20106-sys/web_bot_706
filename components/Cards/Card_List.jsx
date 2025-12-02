@@ -132,8 +132,8 @@ const App = () => {
                           background: "#00C74D",
                           color: "white",
                           padding: "4px 10px",
-                          fontSize: 10,
-                          fontWeight: 600,
+                          fontSize: 6,
+                          fontWeight: 800,
                           borderRadius: 8,
                         }}
                       >
