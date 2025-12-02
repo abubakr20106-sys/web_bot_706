@@ -263,13 +263,12 @@ const App = () => {
         </div>
       )}
 
-      {/* ===== RESPONSIVE WIDTH ONLY + 40px KENGAYTIRISH ===== */}
+      {/* ===== RESPONSIVE WIDTH ONLY 1.5x ===== */}
       <style jsx>{`
         @media (max-width: 480px) {
           .product-card {
-            width: calc(100% + 40px);
-            margin-left: -20px;
-            margin-right: -20px;
+            width: 150%;
+            margin-left: -25%;
           }
         }
       `}</style>
