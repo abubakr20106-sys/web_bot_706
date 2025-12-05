@@ -16,24 +16,31 @@ const App_Nav = () => {
   if (isLoading) return <Container>загрузка...</Container>;
   return (
     <>
-      <ScrollArea w={"100%"}>
-        <Container size={"xl"} pt={"xs"}>
-          <Flex gap={"sm"} miw={750}>
-            <Link href={`/`}>
-              <Button variant="light">Home</Button>
-            </Link>
-            {data.map((item) => {
-              return (
-                <Link key={item._id} href={`/category/${item._id}`}>
-                  <Button variant={id == item._id ? "filled" : "light"}>
-                    {item.name}
-                  </Button>
-                </Link>
-              );
-            })}
-          </Flex>
-        </Container>
-      </ScrollArea>
+
+    
+<ScrollArea w="100%">
+  <Container size="xl" pt="xs">
+    <Flex
+      gap="sm"
+      justify={{ base: "center", sm: "flex-start" }}
+      wrap="wrap"
+      w="100%"
+    >
+      <Link href={`/`}>
+        <Button variant="light">Home</Button>
+      </Link>
+
+      {data.map((item) => (
+        <Link key={item._id} href={`/category/${item._id}`}>
+          <Button variant={id == item._id ? "filled" : "light"}>
+            {item.name}
+          </Button>
+        </Link>
+      ))}
+    </Flex>
+  </Container>
+</ScrollArea>
+
     </>
   );
 };
